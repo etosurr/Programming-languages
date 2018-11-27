@@ -20,7 +20,7 @@ def list():
 @app.route('/get')
 def get():
     file = Path(request.args['file'])
-    return send_file(str(file), attachment_filename=file.name)
+    return send_file(str(file), attachment_filename=file.name, as_attachment=True)
 
 
 if __name__ == '__main__':
